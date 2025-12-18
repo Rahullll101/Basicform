@@ -7,8 +7,10 @@
 </head>
 <body>
     <h1> Student Forms</h1>
-    {{ form.as_p }}
-
-    <input type="submit" value ='submit'>
+    <form method="=POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value ='submit'>
+    </form>
 </body>
 </html>
